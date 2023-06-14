@@ -811,6 +811,11 @@ the right situation:
 *Real* environment variables always win over env vars created by any of the
 ``.env`` files.
 
+.. caution::
+
+    In order to respect the precedence for the real environment variables, make sure the
+    `variables_order PHP setting`_ includes the "E" (for Environment) in your setup.
+
 The ``.env`` and ``.env.<environment>`` files should be committed to the
 repository because they are the same for all developers and machines. However,
 the env files ending in ``.local`` (``.env.local`` and ``.env.<environment>.local``)
@@ -1159,3 +1164,4 @@ And all the other topics related to configuration:
 .. _`environment variables`: https://en.wikipedia.org/wiki/Environment_variable
 .. _`symbolic links`: https://en.wikipedia.org/wiki/Symbolic_link
 .. _`utilities to manage env vars`: https://symfony.com/doc/current/cloud/env.html
+.. _`variables_order PHP setting`: https://www.php.net/manual/en/ini.core.php#ini.variables-order
